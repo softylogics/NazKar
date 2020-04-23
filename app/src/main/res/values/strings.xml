@@ -13,4 +13,11 @@
     <string name="menu_slideshow">Slideshow</string>
 
     <string name="home_second">Home Second</string>
+    <string name="home">Home</string>
+    <string name="animals">Animals</string>
+    <string name="crops">Crops</string>
+    <string name="traders">Traders</string>
+    <string name="menu_animals">Animals</string>
+    <string name="menu_crops">Crops</string>
+    <string name="menu_traders">Traders</string>
 </resources>

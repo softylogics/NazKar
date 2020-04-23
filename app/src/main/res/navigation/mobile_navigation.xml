@@ -7,23 +7,25 @@
 
     <fragment
         android:id="@+id/nav_home"
-        android:name="com.example.nazkar.ui.home.HomeFragment"
+        android:name="com.example.nazkar.home.homeFragment"
         android:label="@string/menu_home"
-        tools:layout="@layout/corona_overview">
-
-
+        tools:layout="@layout/home">
     </fragment>
-
+    <fragment
+        android:id="@+id/nav_animals"
+        android:name="com.example.nazkar.animals.animalsFragment"
+        android:label="@string/menu_animals"
+        tools:layout="@layout/animals">
+    </fragment>
+    <fragment
+        android:id="@+id/nav_crops"
+        android:name="com.example.nazkar.crops.cropsFragment"
+        android:label="@string/menu_crops"
+        tools:layout="@layout/crops" />
 
     <fragment
-        android:id="@+id/nav_gallery"
-        android:name="com.example.nazkar.ui.gallery.GalleryFragment"
-        android:label="@string/menu_gallery"
-        tools:layout="@layout/mask_guide" />
-
-    <fragment
-        android:id="@+id/nav_slideshow"
-        android:name="com.example.nazkar.ui.slideshow.SlideshowFragment"
-        android:label="@string/menu_slideshow"
-        tools:layout="@layout/myths_corona" />
+        android:id="@+id/nav_traders"
+        android:name="com.example.nazkar.traders.tradersFragment"
+        android:label="@string/menu_traders"
+        tools:layout="@layout/traders" />
 </navigation>
