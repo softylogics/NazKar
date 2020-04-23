@@ -6,6 +6,7 @@ import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
+import android.support.v4.app.FragmentTransaction;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.text.Html;
@@ -13,15 +14,17 @@ import android.text.Spanned;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 
+import com.example.nazkar.ItemFragment;
 import com.example.nazkar.R;
 
 public class animalsFragment extends Fragment {
 
     private animalsViewModel animalsViewModel;
-    TextView textview;
+    ImageView bull;
     private Spanned Text;
 
     public View onCreateView(@NonNull LayoutInflater inflater,
@@ -36,12 +39,25 @@ public class animalsFragment extends Fragment {
 
         showBackButton();
         ((AppCompatActivity)getActivity()).getSupportActionBar().setTitle("Animals");
-
+        bull = root.findViewById(R.id.bull);
+        bull.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Fragment animalList = new ItemFragment();
+                replaceFragment(animalList);
+            }
+        });
         return root;
     }
     public void showBackButton() {
         if (getActivity() instanceof AppCompatActivity) {
             ((AppCompatActivity) getActivity()).getSupportActionBar().setDisplayHomeAsUpEnabled(true);
         }
+    }
+    public void replaceFragment(Fragment fragment) {
+        FragmentTransaction transaction = getFragmentManager().beginTransaction();
+        transaction.replace(getId() , fragment);
+        transaction.addToBackStack(null);
+        transaction.commit();
     }
 }

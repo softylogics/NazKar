@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="book_titles">
+        <item>Black</item>
+        <item>Green</item>
+        <item>White</item>
+        <item>Type 3</item>
+        <item>Type 4</item>
+        <item>Type 5</item>
+        <item>Type 6</item>
+        <item>Type 7</item>
+        <item>Type 8</item>
+        <item>Type 9</item>
+    </string-array>
+</resources>
