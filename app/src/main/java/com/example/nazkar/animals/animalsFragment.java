@@ -4,6 +4,9 @@ import androidx.lifecycle.Observer;
 import androidx.lifecycle.ViewModelProviders;
 
 import android.content.Context;
+import android.graphics.Bitmap;
+import android.graphics.BitmapFactory;
+import android.graphics.drawable.Drawable;
 import android.os.Bundle;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
@@ -20,11 +23,14 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
+import android.widget.LinearLayout;
 
 
 import com.example.nazkar.ItemFragment;
 import com.example.nazkar.MyItemRecyclerViewAdapter;
 import com.example.nazkar.R;
+import com.example.nazkar.RVAdapterFroAds;
+import com.example.nazkar.adslist.DummyData;
 
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -37,16 +43,32 @@ public class animalsFragment extends Fragment {
     private Spanned Text;
     private int mColumnCount = 2;
     private ItemFragment.OnListFragmentInteractionListener mListener;
-    List<String> list = new ArrayList<>();
+    List<DummyData> list = new ArrayList<>();
+
+    @Override
+    public void onCreate(@Nullable Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+
+        makelist(R.drawable.quail, "Quail" , "Rs.1000/-");
+        makelist(R.drawable.quail2, "Quail" , "Rs.2000/-");
+        makelist(R.drawable.pigeon, "Pigeon" , "Rs.5000/-");
+        makelist(R.drawable.pelican, "Pelican" , "Rs.7000/-");
+        makelist(R.drawable.penguin, "Penguin" , "Rs.12000/-");
+        makelist(R.drawable.seagull, "Seagull" , "Rs.13000/-");
+    }
+
     public View onCreateView(@NonNull LayoutInflater inflater,
                              ViewGroup container, Bundle savedInstanceState) {
-        makelist();
+
+
         View root = inflater.inflate(R.layout.animals, container, false);
         Toolbar toolbar = getActivity().findViewById(R.id.toolbar);
         ((AppCompatActivity)getActivity()).setSupportActionBar(toolbar);
         ((AppCompatActivity)getActivity()).getSupportActionBar().setDisplayHomeAsUpEnabled(true);
         ((AppCompatActivity)getActivity()).getSupportActionBar().setHomeButtonEnabled(true);
-        if (root instanceof RecyclerView) {
+
+
+
             Context context = root.getContext();
             RecyclerView recyclerView =  root.findViewById(R.id.listre);
             if (mColumnCount <= 1) {
@@ -54,8 +76,8 @@ public class animalsFragment extends Fragment {
             } else {
                 recyclerView.setLayoutManager(new GridLayoutManager(context, mColumnCount));
             }
-            recyclerView.setAdapter(new MyItemRecyclerViewAdapter( list, mListener));
-        }
+            recyclerView.setAdapter(new RVAdapterFroAds( list, mListener));
+
         showBackButton();
         ((AppCompatActivity)getActivity()).getSupportActionBar().setTitle("Animals");
         bull = root.findViewById(R.id.bull);
@@ -79,13 +101,16 @@ public class animalsFragment extends Fragment {
         transaction.addToBackStack(null);
         transaction.commit();
     }
-    private void makelist() {
-
-        list = Arrays.asList(getResources().getStringArray(R.array.book_titles));
-
+    private void makelist(int drawable , String title , String price) {
+        DummyData d = new DummyData();
+        Bitmap image = BitmapFactory.decodeResource(this.getResources() , drawable);
+        d.setImage(image);
+        d.setPrice(price);
+        d.setTitle(title);
+        list.add(d);
     }
     public interface OnListFragmentInteractionListener {
         // TODO: Update argument type and name
-        void onListFragmentInteraction(String item);
+        void onListFragmentInteraction(DummyData item);
     }
 }

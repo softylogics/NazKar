@@ -163,19 +163,9 @@
             android:textColor="#83CCED"
             android:text="Popular Ads" />
 
-        <androidx.core.widget.NestedScrollView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
 
-            >
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="vertical">
 
-                <androidx.recyclerview.widget.RecyclerView xmlns:android="http://schemas.android.com/apk/res/android"
-                    xmlns:app="http://schemas.android.com/apk/res-auto"
-                    xmlns:tools="http://schemas.android.com/tools"
+                <androidx.recyclerview.widget.RecyclerView
                     android:id="@+id/listre"
                     android:name="com.example.nazkar.ItemFragment"
                     android:layout_width="match_parent"
@@ -183,15 +173,13 @@
                     android:layout_marginLeft="16dp"
                     android:layout_marginRight="16dp"
                     app:layoutManager="LinearLayoutManager"
-                    tools:context=".ItemFragment"
+                    tools:context=".animals.animalsFragment"
                     tools:listitem="@layout/fragment_item"
-                    android:layout_columnSpan="2"/>
+           />
 
 
 
-            </LinearLayout>
 
-        </androidx.core.widget.NestedScrollView>
 
     </LinearLayout>
 

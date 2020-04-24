@@ -2,45 +2,44 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="wrap_content"
     android:layout_height="wrap_content"
+    android:padding="5dp"
+    android:background="@drawable/back"
     android:orientation="horizontal">
 
-<ImageView
+
+    <ImageView
+    android:id="@+id/imagead"
     android:layout_width="wrap_content"
     android:layout_height="wrap_content"
-    android:src="@drawable/horse_ad"/>
+    />
 <LinearLayout
     android:layout_width="wrap_content"
-    android:layout_height="wrap_content"
+    android:id="@+id/layoutpa"
+    android:layout_height="match_parent"
     android:orientation="vertical">
     <TextView
-        android:id="@+id/dd1"
+        android:id="@+id/titlead"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginLeft="10dp"
-        android:layout_marginBottom="10dp"
-        android:padding="5dp"
-        android:background="@drawable/back"
-        android:textAppearance="?attr/textAppearanceListItem"
-        android:text="Black Horse"/>
+        android:layout_height="0dp"
+        android:layout_weight="1"
+
+
+
+        />
     <TextView
-        android:id="@+id/dd2"
+        android:id="@+id/pricead"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginLeft="10dp"
-        android:layout_marginBottom="10dp"
-        android:padding="5dp"
-        android:background="@drawable/back"
-        android:textAppearance="?attr/textAppearanceListItem"
-        android:text="Rs. 1000000/-"/>
+        android:layout_height="0dp"
+        android:layout_weight="1"
+
+
+        />
     <TextView
-        android:id="@+id/dd3"
+        android:id="@+id/seedetailad"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginLeft="10dp"
-        android:padding="5dp"
-        android:textColor="@color/colorPrimary"
-        android:background="@drawable/back"
-        android:textAppearance="?attr/textAppearanceListItem"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+android:textColor="@color/colorPrimary"
         android:text="See Details"/>
 
 </LinearLayout>
