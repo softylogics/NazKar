@@ -1,24 +1,115 @@
 <?xml version="1.0" encoding="utf-8"?>
 <menu xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
+
     tools:showIn="navigation_view">
 
-    <group android:checkableBehavior="single">
+    <group
+        android:id="@+id/one"
 
-
-
-
+        android:checkableBehavior="single">
         <item
-            android:id="@+id/nav_animals"
-            android:icon="@drawable/ic_menu_gallery"
-            android:title="@string/animals" />
-        <item
-            android:id="@+id/nav_crops"
-            android:icon="@drawable/ic_menu_slideshow"
-            android:title="@string/crops"/>
-        <item
-            android:id="@+id/nav_traders"
-            android:icon="@drawable/ic_menu_slideshow"
-            android:title="@string/traders"/>
+            android:id="@+id/homeicon"
+
+            android:icon="@drawable/homeicon"
+            android:title="Home" />
     </group>
+    <group
+        android:id="@+id/two"
+        android:checkableBehavior="single">
+        <item
+            android:id="@+id/profileicon"
+            android:icon="@drawable/usericonsmall"
+            android:title="Profile" />
+    </group>
+    <group
+        android:id="@+id/three"
+        android:checkableBehavior="single">
+        <item
+            android:id="@+id/advancesearch"
+            android:icon="@drawable/searchadvance"
+            android:title="Advanced Search" />
+    </group>
+    <group
+        android:id="@+id/four"
+        
+        android:checkableBehavior="single">
+        <item
+            android:id="@+id/notifi"
+            android:icon="@drawable/notificationicon"
+            android:title="Notifications"/>
+    </group>
+    <group
+        android:id="@+id/five"
+        android:checkableBehavior="single">
+        <item
+            android:id="@+id/activeads"
+            android:icon="@drawable/activeads"
+            android:title="My Ads" />
+    </group>
+    <group
+        android:id="@+id/six"
+        android:checkableBehavior="single">
+        <item
+            android:id="@+id/inactiveads"
+            android:icon="@drawable/inactiveads"
+            android:title="Inactive Ads" />
+    </group>
+    <group
+        android:id="@+id/seven"
+        android:checkableBehavior="single">
+        <item
+            android:id="@+id/logouticon"
+            android:icon="@drawable/logoutmenu"
+            android:title="Logout" />
+    </group>
+    <group
+        android:id="@+id/eight"
+        android:checkableBehavior="single">
+        <item
+            android:id="@+id/settingsicon"
+            android:icon="@drawable/settingsicon"
+            android:title="Settings" />
+    </group>
+
+
+    <group
+        android:id="@+id/nine"
+        android:checkableBehavior="single">
+        <item
+            android:id="@+id/pages"
+            android:title="Pages" />
+        <item
+            android:id="@+id/aboutus"
+            android:icon="@drawable/pages"
+            android:title="About Us" />
+    </group>
+    <group
+        android:id="@+id/ten"
+        android:checkableBehavior="single">
+        <item
+            android:id="@+id/howitworks"
+            android:icon="@drawable/pages"
+            android:title="How It Works" />
+    </group>
+    <group
+        android:id="@+id/eleven"
+        android:checkableBehavior="single">
+        <item
+            android:id="@+id/faq"
+            android:icon="@drawable/pages"
+            android:title="FAQ'S" />
+    </group>
+    <group
+        android:id="@+id/twelve"
+        android:checkableBehavior="single">
+        <item
+            android:id="@+id/privacypo"
+            android:icon="@drawable/pages"
+            android:title="Privacy Policy" />
+    </group>
+
+
+
+
 </menu>

@@ -9,6 +9,6 @@
     <bitmap
 
         android:gravity="center"
-        android:src="@drawable/wild_goat" />
+        android:src="@drawable/splash" />
 </item>
 </layer-list>
