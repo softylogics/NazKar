@@ -1,4 +1,4 @@
-package com.example.nazkar;
+package com.softylogics.nazkar;
 
 import androidx.recyclerview.widget.RecyclerView;
 import android.view.LayoutInflater;
@@ -6,9 +6,8 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
 
-import com.example.nazkar.ItemFragment.OnListFragmentInteractionListener;
-import com.example.nazkar.adslist.DummyData;
-import com.example.nazkar.animalList.animalList;
+import com.softylogics.nazkar.ItemFragment.OnListFragmentInteractionListener;
+import com.softylogics.nazkar.animalList.animalList;
 
 import java.util.List;
 

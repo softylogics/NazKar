@@ -8,19 +8,19 @@
 
     <fragment
         android:id="@+id/nav_animals"
-        android:name="com.example.nazkar.animals.animalsFragment"
+        android:name="com.softylogics.nazkar.animals.animalsFragment"
         android:label="@string/menu_animals"
         tools:layout="@layout/animals">
     </fragment>
     <fragment
         android:id="@+id/nav_crops"
-        android:name="com.example.nazkar.crops.cropsFragment"
+        android:name="com.softylogics.nazkar.crops.cropsFragment"
         android:label="@string/menu_crops"
         tools:layout="@layout/crops" />
 
     <fragment
         android:id="@+id/nav_traders"
-        android:name="com.example.nazkar.traders.tradersFragment"
+        android:name="com.softylogics.nazkar.traders.tradersFragment"
         android:label="@string/menu_traders"
         tools:layout="@layout/traders" />
 </navigation>

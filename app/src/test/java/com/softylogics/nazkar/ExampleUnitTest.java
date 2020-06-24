@@ -1,4 +1,4 @@
-package com.example.nazkar;
+package com.softylogics.nazkar;
 
 import org.junit.Test;
 

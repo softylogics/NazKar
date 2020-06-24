@@ -1,10 +1,8 @@
-package com.example.nazkar.traders;
+package com.softylogics.nazkar.crops;
 
-import androidx.lifecycle.Observer;
 import androidx.lifecycle.ViewModelProviders;
 import android.os.Bundle;
 import androidx.annotation.NonNull;
-import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
@@ -15,25 +13,27 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
 
-import com.example.nazkar.R;
 
-public class tradersFragment extends Fragment {
+import com.softylogics.nazkar.R;
 
-    private tradersViewModel tradersViewModel;
+public class cropsFragment extends Fragment {
+
+    private cropsViewModel cropsViewModel;
     private TextView textview;
     private Spanned Text;
+
     public View onCreateView(@NonNull LayoutInflater inflater,
                              ViewGroup container, Bundle savedInstanceState) {
-        tradersViewModel =
-                ViewModelProviders.of(this).get(tradersViewModel.class);
-        View root = inflater.inflate(R.layout.traders, container, false);
+        cropsViewModel =
+                ViewModelProviders.of(this).get(cropsViewModel.class);
+        View root = inflater.inflate(R.layout.crops, container, false);
         Toolbar toolbar = getActivity().findViewById(R.id.toolbar);
         ((AppCompatActivity)getActivity()).setSupportActionBar(toolbar);
         ((AppCompatActivity)getActivity()).getSupportActionBar().setDisplayHomeAsUpEnabled(true);
         ((AppCompatActivity)getActivity()).getSupportActionBar().setHomeButtonEnabled(true);
 
 
-        ((AppCompatActivity)getActivity()).getSupportActionBar().setTitle("Traders");
+        ((AppCompatActivity)getActivity()).getSupportActionBar().setTitle("Crops");
 
         return root;
     }

@@ -1,4 +1,4 @@
-package com.example.nazkar.crops;
+package com.softylogics.nazkar.crops;
 
 import androidx.lifecycle.LiveData;
 import androidx.lifecycle.MutableLiveData;

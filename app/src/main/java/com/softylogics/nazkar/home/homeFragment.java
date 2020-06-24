@@ -1,11 +1,9 @@
-package com.example.nazkar.home;
+package com.softylogics.nazkar.home;
 
-import androidx.lifecycle.Observer;
 import androidx.lifecycle.ViewModelProviders;
 import android.os.Bundle;
 import androidx.appcompat.widget.Toolbar;
 import androidx.annotation.NonNull;
-import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentTransaction;
 
@@ -16,11 +14,11 @@ import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.TextView;
 
-import com.example.nazkar.R;
-import com.example.nazkar.animals.animalsFragment;
-import com.example.nazkar.animals.animalsViewModel;
-import com.example.nazkar.crops.cropsFragment;
-import com.example.nazkar.traders.tradersFragment;
+import com.softylogics.nazkar.R;
+import com.softylogics.nazkar.animals.animalsFragment;
+import com.softylogics.nazkar.animals.animalsViewModel;
+import com.softylogics.nazkar.crops.cropsFragment;
+import com.softylogics.nazkar.traders.tradersFragment;
 
 public class homeFragment extends Fragment {
 

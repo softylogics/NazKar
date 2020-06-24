@@ -1,4 +1,4 @@
-package com.example.nazkar;
+package com.softylogics.nazkar;
 
 import android.os.Bundle;
 import com.google.android.material.navigation.NavigationView;

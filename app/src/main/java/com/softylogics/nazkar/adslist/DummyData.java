@@ -1,4 +1,4 @@
-package com.example.nazkar.adslist;
+package com.softylogics.nazkar.adslist;
 
 import android.graphics.Bitmap;
 

@@ -1,4 +1,4 @@
-package com.example.nazkar.animals;
+package com.softylogics.nazkar.animals;
 
 import androidx.lifecycle.LiveData;
 import androidx.lifecycle.MutableLiveData;

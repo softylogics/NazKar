@@ -1,4 +1,4 @@
-package com.example.nazkar.traders;
+package com.softylogics.nazkar.traders;
 
 import androidx.lifecycle.LiveData;
 import androidx.lifecycle.MutableLiveData;

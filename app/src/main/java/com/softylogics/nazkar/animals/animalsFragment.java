@@ -1,12 +1,8 @@
-package com.example.nazkar.animals;
-
-import androidx.lifecycle.Observer;
-import androidx.lifecycle.ViewModelProviders;
+package com.softylogics.nazkar.animals;
 
 import android.content.Context;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
-import android.graphics.drawable.Drawable;
 import android.os.Bundle;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
@@ -23,17 +19,14 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
-import android.widget.LinearLayout;
 
 
-import com.example.nazkar.ItemFragment;
-import com.example.nazkar.MyItemRecyclerViewAdapter;
-import com.example.nazkar.R;
-import com.example.nazkar.RVAdapterFroAds;
-import com.example.nazkar.adslist.DummyData;
+import com.softylogics.nazkar.ItemFragment;
+import com.softylogics.nazkar.R;
+import com.softylogics.nazkar.RVAdapterFroAds;
+import com.softylogics.nazkar.adslist.DummyData;
 
 import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.List;
 
 public class animalsFragment extends Fragment {
