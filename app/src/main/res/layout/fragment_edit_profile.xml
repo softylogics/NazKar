@@ -19,8 +19,9 @@
         >
 
         <ImageView
+
             android:id="@+id/userimageedit"
-            android:textColor="@color/appcolor"
+
             android:src="@drawable/usericonedit"
             android:layout_width="wrap_content"
             android:layout_centerHorizontal="true"
