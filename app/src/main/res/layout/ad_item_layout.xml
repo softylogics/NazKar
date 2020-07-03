@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/relativeLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ImageView
+        android:layout_marginTop="10dp"
+        android:id="@+id/imagead"
+        android:layout_marginLeft="5dp"
+        android:background="@drawable/adlayout"
+        android:layout_width="96dp"
+        android:layout_height="96dp"
+        android:scaleType="fitXY"
+        android:src="@drawable/splash"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/adpricetxtv"
+
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        android:layout_below="@id/imagead"
+        android:alpha="0.9"
+        android:textColor="@color/appcolor"
+        android:background="@drawable/adpricelayout"
+        android:text="Rs.35000"
+        android:textSize="8sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@id/imagead"
+        app:layout_constraintEnd_toEndOf="@id/imagead"
+        app:layout_constraintStart_toStartOf="@id/imagead" />
+
+    <TextView
+        android:id="@+id/adnametxtv"
+        android:textStyle="bold"
+        android:textColor="@color/appcolor"
+        android:layout_width="0dp"
+        android:gravity="center_horizontal"
+        android:layout_height="wrap_content"
+        android:text="Beautiful white goat"
+        android:textSize="8sp"
+        android:layout_marginTop="3dp"
+        app:layout_constraintEnd_toEndOf="@id/imagead"
+
+    app:layout_constraintStart_toStartOf="@id/imagead"
+        app:layout_constraintTop_toBottomOf="@id/imagead" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
