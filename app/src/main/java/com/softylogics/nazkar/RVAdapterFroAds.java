@@ -35,7 +35,7 @@ public class RVAdapterFroAds extends RecyclerView.Adapter<RVAdapterFroAds.ViewHo
     @Override
     public ViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
         View view = LayoutInflater.from(parent.getContext())
-                .inflate(R.layout.fragment_item, parent, false);
+                .inflate(R.layout.ad_item_layout, parent, false);
 
 
         return new ViewHolder(view);
@@ -78,8 +78,8 @@ public class RVAdapterFroAds extends RecyclerView.Adapter<RVAdapterFroAds.ViewHo
             super(view);
             mView = view;
 
-            title = view.findViewById(R.id.titlead);
-            price = view.findViewById(R.id.pricead);
+            title = view.findViewById(R.id.adnametxtv);
+            price = view.findViewById(R.id.adpricetxtv);
             img = view.findViewById(R.id.imagead);
 
 

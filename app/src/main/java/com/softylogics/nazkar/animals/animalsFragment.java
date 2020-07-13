@@ -34,7 +34,7 @@ public class animalsFragment extends Fragment {
     private animalsViewModel animalsViewModel;
     ImageView bull;
     private Spanned Text;
-    private int mColumnCount = 2;
+    private int mColumnCount = 1;
     private ItemFragment.OnListFragmentInteractionListener mListener;
     List<DummyData> list = new ArrayList<>();
 
@@ -65,7 +65,7 @@ public class animalsFragment extends Fragment {
             Context context = root.getContext();
             RecyclerView recyclerView =  root.findViewById(R.id.listre);
             if (mColumnCount <= 1) {
-                recyclerView.setLayoutManager(new LinearLayoutManager(context));
+                recyclerView.setLayoutManager(new LinearLayoutManager(context, LinearLayoutManager.HORIZONTAL , false));
             } else {
                 recyclerView.setLayoutManager(new GridLayoutManager(context, mColumnCount));
             }
