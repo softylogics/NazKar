@@ -13,10 +13,11 @@
 
         <androidx.appcompat.widget.Toolbar
             android:id="@+id/toolbar"
+            app:titleTextColor="#EDED94"
             android:layout_width="match_parent"
             android:layout_height="?attr/actionBarSize"
             app:popupTheme="@style/ThemeOverlay.AppCompat.Dark"
-            android:background="#F1A8A2"
+            android:background="@color/appcolor"
            />
 <!--            app:popupTheme="@style/AppTheme.PopupOverlay" />-->
 

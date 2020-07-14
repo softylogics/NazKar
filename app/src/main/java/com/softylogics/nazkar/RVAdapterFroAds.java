@@ -46,6 +46,7 @@ public class RVAdapterFroAds extends RecyclerView.Adapter<RVAdapterFroAds.ViewHo
 
 
         holder.img.setImageBitmap(mValues.get(position).getImage());
+        holder.img.setClipToOutline(true);
         holder.price.setText(mValues.get(position).getPrice());
         holder.title.setText(mValues.get(position).getTitle());
 

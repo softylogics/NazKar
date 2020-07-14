@@ -42,12 +42,12 @@ public class animalsFragment extends Fragment {
     public void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
-        makelist(R.drawable.quail, "Quail" , "Rs.1000/-");
-        makelist(R.drawable.quail2, "Quail" , "Rs.2000/-");
-        makelist(R.drawable.pigeon, "Pigeon" , "Rs.5000/-");
-        makelist(R.drawable.pelican, "Pelican" , "Rs.7000/-");
-        makelist(R.drawable.penguin, "Penguin" , "Rs.12000/-");
-        makelist(R.drawable.seagull, "Seagull" , "Rs.13000/-");
+        makelist(R.drawable.index, "Quail" , "Rs.1000/-");
+        makelist(R.drawable.index, "Quail" , "Rs.2000/-");
+        makelist(R.drawable.index, "Pigeon" , "Rs.5000/-");
+        makelist(R.drawable.index, "Pelican" , "Rs.7000/-");
+        makelist(R.drawable.index, "Penguin" , "Rs.12000/-");
+        makelist(R.drawable.index, "Seagull" , "Rs.13000/-");
     }
 
     public View onCreateView(@NonNull LayoutInflater inflater,
@@ -63,24 +63,24 @@ public class animalsFragment extends Fragment {
 
 
             Context context = root.getContext();
-            RecyclerView recyclerView =  root.findViewById(R.id.listre);
-            if (mColumnCount <= 1) {
-                recyclerView.setLayoutManager(new LinearLayoutManager(context, LinearLayoutManager.HORIZONTAL , false));
-            } else {
-                recyclerView.setLayoutManager(new GridLayoutManager(context, mColumnCount));
-            }
-            recyclerView.setAdapter(new RVAdapterFroAds( list, mListener));
+            RecyclerView recyclerViewads =  root.findViewById(R.id.listre);
+        RecyclerView recyclerViewanimals =  root.findViewById(R.id.animalsRecycler);
+        RecyclerView recyclerViewcrops =  root.findViewById(R.id.cropsRecycler);
+        RecyclerView recyclerViewtraders =  root.findViewById(R.id.tradersRecycler);
+
+
+        recyclerViewads.setLayoutManager(new LinearLayoutManager(context, LinearLayoutManager.HORIZONTAL , false));
+        recyclerViewads.setAdapter(new RVAdapterFroAds( list, mListener));
+        recyclerViewanimals.setLayoutManager(new LinearLayoutManager(context, LinearLayoutManager.HORIZONTAL , false));
+        recyclerViewanimals.setAdapter(new RVAdapterFroAds( list, mListener));
+        recyclerViewcrops.setLayoutManager(new LinearLayoutManager(context, LinearLayoutManager.HORIZONTAL , false));
+        recyclerViewcrops.setAdapter(new RVAdapterFroAds( list, mListener));
+        recyclerViewtraders.setLayoutManager(new LinearLayoutManager(context, LinearLayoutManager.HORIZONTAL , false));
+        recyclerViewtraders.setAdapter(new RVAdapterFroAds( list, mListener));
 
         showBackButton();
-        ((AppCompatActivity)getActivity()).getSupportActionBar().setTitle("Animals");
-        bull = root.findViewById(R.id.bull);
-        bull.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Fragment animalList = new ItemFragment();
-                replaceFragment(animalList);
-            }
-        });
+        ((AppCompatActivity)getActivity()).getSupportActionBar().setTitle("Latest Ads");
+
         return root;
     }
     public void showBackButton() {

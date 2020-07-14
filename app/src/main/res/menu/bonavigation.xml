@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item
+        android:id="@+id/navigation_home"
+        android:icon="@drawable/homeicon"
+        android:title="Home"
+        app:showAsAction="always"/>
+
+    <item
+        android:id="@+id/navigation_notification"
+        android:icon="@drawable/notificationicon"
+        app:showAsAction="always"
+
+        android:title="Notification" />
+
+    <item
+        android:id="@+id/navigation_add"
+        android:icon="@drawable/add_icon"
+        android:title=""
+        app:showAsAction="always"/>
+
+    <item
+    android:id="@+id/navigation_category"
+    android:icon="@drawable/categoryicon"
+    android:title="Categories"
+        app:showAsAction="always"/>
+
+    <item
+        android:id="@+id/navigation_account"
+        android:icon="@drawable/usericonsmall"
+        android:title="My Account"
+        app:showAsAction="always"/>
+</menu>
