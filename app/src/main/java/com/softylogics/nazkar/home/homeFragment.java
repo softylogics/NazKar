@@ -15,14 +15,14 @@ import android.widget.Button;
 import android.widget.TextView;
 
 import com.softylogics.nazkar.R;
-import com.softylogics.nazkar.animals.animalsFragment;
-import com.softylogics.nazkar.animals.animalsViewModel;
+import com.softylogics.nazkar.animals.latestAdsFragment;
+import com.softylogics.nazkar.animals.latestAdsViewModel;
 import com.softylogics.nazkar.crops.cropsFragment;
 import com.softylogics.nazkar.traders.tradersFragment;
 
 public class homeFragment extends Fragment {
 
-    private animalsViewModel animalsViewModel;
+    private latestAdsViewModel latestAdsViewModel;
     TextView textview;
     private Spanned Text;
     Button animals;
@@ -31,8 +31,8 @@ public class homeFragment extends Fragment {
     public View onCreateView(@NonNull LayoutInflater inflater,
                              ViewGroup container, Bundle savedInstanceState) {
 
-        animalsViewModel =
-                ViewModelProviders.of(this).get(animalsViewModel.class);
+        latestAdsViewModel =
+                ViewModelProviders.of(this).get(latestAdsViewModel.class);
         View root = inflater.inflate(R.layout.home, container, false);
         Toolbar toolbar = getActivity().findViewById(R.id.toolbar);
         getActivity().setTitle("");
@@ -40,7 +40,7 @@ public class homeFragment extends Fragment {
         animals.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                animalsFragment fragment = new animalsFragment();
+                latestAdsFragment fragment = new latestAdsFragment();
                 replaceFragment(fragment);
             }
         });

@@ -4,11 +4,11 @@ import androidx.lifecycle.LiveData;
 import androidx.lifecycle.MutableLiveData;
 import androidx.lifecycle.ViewModel;
 
-public class animalsViewModel extends ViewModel {
+public class latestAdsViewModel extends ViewModel {
 
     private MutableLiveData<String> mText;
 
-    public animalsViewModel() {
+    public latestAdsViewModel() {
         mText = new MutableLiveData<>();
         mText.setValue("This is mask fragment");
     }

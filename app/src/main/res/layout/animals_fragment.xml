@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".animals.latestAdsFragment">
+
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="244dp"
+        android:orientation="vertical"
+        android:layout_weight="1"
+        android:background="@drawable/loginimage">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Welcome to Animals"
+            android:textColor="#F7F8FA"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:layout_marginBottom="20dp"
+            app:layout_constraintBottom_toTopOf="@+id/editText"
+            app:layout_constraintEnd_toEndOf="@id/editText"
+            app:layout_constraintStart_toStartOf="@id/editText"
+            />
+
+        <EditText
+            android:id="@+id/editText"
+            android:paddingLeft="10dp"
+            android:textCursorDrawable="@color/appcolor"
+            android:layout_width="304dp"
+            android:layout_height="38dp"
+            android:layout_gravity="center|bottom"
+            android:layout_marginLeft="40dp"
+            android:textColorHint="@color/appcolor"
+            android:layout_marginRight="40dp"
+            android:layout_marginBottom="40dp"
+            android:background="@drawable/searchbar"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <ImageView
+            android:id="@+id/searchiconads"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/searchicon"
+            app:layout_constraintVertical_bias="0.25"
+            app:layout_constraintRight_toRightOf="@id/editText"
+            app:layout_constraintTop_toTopOf="@id/editText"
+            app:layout_constraintBottom_toBottomOf="@id/editText"
+            android:layout_marginRight="15dp"/>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:layout_marginRight="20dp"
+        android:layout_marginLeft="20dp"
+
+        android:id="@+id/recyclerviewanimals"
+        android:name="com.example.nazkar.ItemFragment"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+
+        app:layoutManager="LinearLayoutManager"
+        tools:context=".animals.latestAdsFragment"
+        tools:listitem="@layout/fragment_item"
+        />
+
+
+
+
+
+
+        <LinearLayout
+            android:background="@color/colorPrimary"
+            android:layout_width="match_parent"
+            android:orientation="vertical"
+            android:layout_weight="3"
+            android:layout_height="wrap_content">
+            <TextView
+                android:layout_marginRight="20dp"
+                android:layout_marginLeft="20dp"
+
+                android:id="@+id/adstxtv"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+
+                android:textStyle="bold"
+                android:textSize="30sp"
+                android:textColor="@color/appcolor"
+                android:text="Featured Ads" />
+
+
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:layout_marginRight="20dp"
+                android:layout_marginLeft="20dp"
+
+                android:id="@+id/listre"
+                android:name="com.example.nazkar.ItemFragment"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+
+                app:layoutManager="LinearLayoutManager"
+                tools:context=".animals.latestAdsFragment"
+                tools:listitem="@layout/fragment_item"
+                />
+
+
+        </LinearLayout>
+
+
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/bottomnavigation"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom"
+        android:foregroundTint="@color/appcolor"
+        android:background="@color/colorPrimary"
+        app:itemIconTint="@color/fore_bottom_nav"
+        app:itemTextColor="@color/fore_bottom_nav"
+        app:menu="@menu/bonavigation" />
+
+</LinearLayout>

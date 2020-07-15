@@ -1,15 +1,18 @@
-package com.softylogics.nazkar.animals;
+package com.softylogics.nazkar;
+
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.widget.Toolbar;
+import androidx.fragment.app.FragmentTransaction;
+import androidx.lifecycle.ViewModelProviders;
 
 import android.content.Context;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 import android.os.Bundle;
+
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
-import androidx.fragment.app.FragmentTransaction;
-import androidx.appcompat.app.AppCompatActivity;
-import androidx.appcompat.widget.Toolbar;
 import androidx.recyclerview.widget.GridLayoutManager;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
@@ -20,24 +23,25 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
 
-
-import com.softylogics.nazkar.ItemFragment;
-import com.softylogics.nazkar.R;
-import com.softylogics.nazkar.RVAdapterFroAds;
 import com.softylogics.nazkar.adslist.DummyData;
+import com.softylogics.nazkar.animals.latestAdsViewModel;
 
 import java.util.ArrayList;
 import java.util.List;
 
 public class animalsFragment extends Fragment {
 
-    private animalsViewModel animalsViewModel;
+    private AnimalsViewModel mViewModel;
+    private com.softylogics.nazkar.animals.latestAdsViewModel latestAdsViewModel;
     ImageView bull;
     private Spanned Text;
-    private int mColumnCount = 1;
+    private int mColumnCount = 3;
     private ItemFragment.OnListFragmentInteractionListener mListener;
     List<DummyData> list = new ArrayList<>();
 
+    public static animalsFragment newInstance() {
+        return new animalsFragment();
+    }
     @Override
     public void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -48,13 +52,23 @@ public class animalsFragment extends Fragment {
         makelist(R.drawable.index, "Pelican" , "Rs.7000/-");
         makelist(R.drawable.index, "Penguin" , "Rs.12000/-");
         makelist(R.drawable.index, "Seagull" , "Rs.13000/-");
+        makelist(R.drawable.index, "Quail" , "Rs.1000/-");
+        makelist(R.drawable.index, "Quail" , "Rs.2000/-");
+        makelist(R.drawable.index, "Pigeon" , "Rs.5000/-");
+        makelist(R.drawable.index, "Pelican" , "Rs.7000/-");
+        makelist(R.drawable.index, "Penguin" , "Rs.12000/-");
+        makelist(R.drawable.index, "Seagull" , "Rs.13000/-");
+        makelist(R.drawable.index, "Quail" , "Rs.1000/-");
+        makelist(R.drawable.index, "Quail" , "Rs.2000/-");
+        makelist(R.drawable.index, "Pigeon" , "Rs.5000/-");
+        makelist(R.drawable.index, "Pelican" , "Rs.7000/-");
+        makelist(R.drawable.index, "Penguin" , "Rs.12000/-");
+        makelist(R.drawable.index, "Seagull" , "Rs.13000/-");
     }
-
-    public View onCreateView(@NonNull LayoutInflater inflater,
-                             ViewGroup container, Bundle savedInstanceState) {
-
-
-        View root = inflater.inflate(R.layout.animals, container, false);
+    @Override
+    public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container,
+                             @Nullable Bundle savedInstanceState) {
+        View root = inflater.inflate(R.layout.animals_fragment, container, false);
         Toolbar toolbar = getActivity().findViewById(R.id.toolbar);
         ((AppCompatActivity)getActivity()).setSupportActionBar(toolbar);
         ((AppCompatActivity)getActivity()).getSupportActionBar().setDisplayHomeAsUpEnabled(true);
@@ -62,24 +76,20 @@ public class animalsFragment extends Fragment {
 
 
 
-            Context context = root.getContext();
-            RecyclerView recyclerViewads =  root.findViewById(R.id.listre);
-        RecyclerView recyclerViewanimals =  root.findViewById(R.id.animalsRecycler);
-        RecyclerView recyclerViewcrops =  root.findViewById(R.id.cropsRecycler);
-        RecyclerView recyclerViewtraders =  root.findViewById(R.id.tradersRecycler);
+        Context context = root.getContext();
+        RecyclerView recyclerViewads =  root.findViewById(R.id.listre);
+        RecyclerView recyclerViewanimals =  root.findViewById(R.id.recyclerviewanimals);
+
+        recyclerViewanimals.setLayoutManager(new LinearLayoutManager(context , LinearLayoutManager.HORIZONTAL, false));
+        recyclerViewanimals.setAdapter(new RVAdapterForCircularAds( list, mListener));
 
 
-        recyclerViewads.setLayoutManager(new LinearLayoutManager(context, LinearLayoutManager.HORIZONTAL , false));
+        recyclerViewads.setLayoutManager(new GridLayoutManager(context, mColumnCount));
         recyclerViewads.setAdapter(new RVAdapterFroAds( list, mListener));
-        recyclerViewanimals.setLayoutManager(new LinearLayoutManager(context, LinearLayoutManager.HORIZONTAL , false));
-        recyclerViewanimals.setAdapter(new RVAdapterFroAds( list, mListener));
-        recyclerViewcrops.setLayoutManager(new LinearLayoutManager(context, LinearLayoutManager.HORIZONTAL , false));
-        recyclerViewcrops.setAdapter(new RVAdapterFroAds( list, mListener));
-        recyclerViewtraders.setLayoutManager(new LinearLayoutManager(context, LinearLayoutManager.HORIZONTAL , false));
-        recyclerViewtraders.setAdapter(new RVAdapterFroAds( list, mListener));
+
 
         showBackButton();
-        ((AppCompatActivity)getActivity()).getSupportActionBar().setTitle("Latest Ads");
+        ((AppCompatActivity)getActivity()).getSupportActionBar().setTitle("Animals");
 
         return root;
     }
@@ -102,8 +112,12 @@ public class animalsFragment extends Fragment {
         d.setTitle(title);
         list.add(d);
     }
-    public interface OnListFragmentInteractionListener {
-        // TODO: Update argument type and name
-        void onListFragmentInteraction(DummyData item);
+
+    @Override
+    public void onActivityCreated(@Nullable Bundle savedInstanceState) {
+        super.onActivityCreated(savedInstanceState);
+        mViewModel = ViewModelProviders.of(this).get(AnimalsViewModel.class);
+        // TODO: Use the ViewModel
     }
+
 }

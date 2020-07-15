@@ -17,7 +17,7 @@
     <item
         android:id="@+id/navigation_add"
         android:icon="@drawable/add_icon"
-        android:title=""
+        android:title="Post Ad"
         app:showAsAction="always"/>
 
     <item

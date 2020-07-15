@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/relativeLayout"
+    android:layout_marginRight="20dp"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content">
+
+    <ImageView
+        android:layout_marginTop="10dp"
+        android:id="@+id/imagead"
+
+        android:background="@drawable/circle"
+        android:layout_width="112dp"
+        android:layout_height="112dp"
+        android:scaleType="fitXY"
+        android:src="@drawable/splash"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+    <TextView
+        android:id="@+id/adnametxtv"
+        android:textStyle="bold"
+        android:textColor="@color/appcolor"
+        android:layout_width="0dp"
+        android:gravity="center_horizontal"
+        android:layout_height="wrap_content"
+        android:text="Beautiful white goat"
+        android:textSize="12sp"
+        android:layout_marginTop="3dp"
+        app:layout_constraintEnd_toEndOf="@id/imagead"
+
+        app:layout_constraintStart_toStartOf="@id/imagead"
+        app:layout_constraintTop_toBottomOf="@id/imagead" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

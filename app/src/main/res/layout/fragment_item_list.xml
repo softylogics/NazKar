@@ -9,6 +9,6 @@
     android:layout_marginLeft="16dp"
     android:layout_marginRight="16dp"
     app:layoutManager="LinearLayoutManager"
-    tools:context=".animals.animalsFragment"
+    tools:context=".animals.latestAdsFragment"
     tools:listitem="@layout/fragment_item"
     android:layout_columnSpan="2"/>
