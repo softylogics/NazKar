@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:orientation="vertical"
+    android:layout_height="match_parent"
+    tools:context=".offering">
+
+    <ImageView
+        android:id="@+id/animalsbutton"
+        android:src="@drawable/wild_goat"
+        android:layout_margin="30dp"
+        android:scaleType="fitXY"
+        android:background="@drawable/adlayout"
+        android:layout_width="match_parent"
+        android:layout_weight="1"
+        android:layout_height="0dp" />
+
+
+    <ImageView
+        android:id="@+id/cropsbutton"
+        android:background="@drawable/adlayout"
+        android:scaleType="fitXY"
+        android:src="@drawable/wild_goat"
+        android:layout_margin="30dp"
+        android:layout_width="match_parent"
+        android:layout_weight="1"
+        android:layout_height="0dp" />
+
+    <ImageView
+        android:id="@+id/tradersbutton"
+        android:background="@drawable/adlayout"
+        android:scaleType="fitXY"
+        android:layout_margin="30dp"
+        android:src="@drawable/wild_goat"
+        android:layout_width="match_parent"
+        android:layout_weight="1"
+        android:layout_height="0dp" />
+
+</LinearLayout>

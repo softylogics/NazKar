@@ -20,7 +20,6 @@ import android.view.ViewGroup;
 import android.widget.ImageView;
 
 
-import com.softylogics.nazkar.ItemFragment;
 import com.softylogics.nazkar.R;
 import com.softylogics.nazkar.RVAdapterFroAds;
 import com.softylogics.nazkar.adslist.DummyData;

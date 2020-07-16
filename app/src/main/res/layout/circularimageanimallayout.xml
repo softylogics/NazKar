@@ -8,7 +8,7 @@
 
     <ImageView
         android:layout_marginTop="10dp"
-        android:id="@+id/imagead"
+        android:id="@+id/circularimagead"
 
         android:background="@drawable/circle"
         android:layout_width="112dp"
@@ -20,7 +20,7 @@
 
 
     <TextView
-        android:id="@+id/adnametxtv"
+        android:id="@+id/circularadnametxtv"
         android:textStyle="bold"
         android:textColor="@color/appcolor"
         android:layout_width="0dp"

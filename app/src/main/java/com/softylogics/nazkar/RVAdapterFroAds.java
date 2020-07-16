@@ -8,9 +8,7 @@ import android.widget.TextView;
 
 import androidx.recyclerview.widget.RecyclerView;
 
-import com.softylogics.nazkar.ItemFragment.OnListFragmentInteractionListener;
 import com.softylogics.nazkar.adslist.DummyData;
-import com.softylogics.nazkar.animalList.animalList;
 
 import java.util.List;
 
@@ -22,11 +20,9 @@ import java.util.List;
 public class RVAdapterFroAds extends RecyclerView.Adapter<RVAdapterFroAds.ViewHolder> {
 
     private final List<DummyData> mValues;
-    private final OnListFragmentInteractionListener mListener;
 
-    public RVAdapterFroAds(List<DummyData> items, OnListFragmentInteractionListener listener) {
+    public RVAdapterFroAds(List<DummyData> items) {
         mValues = items;
-        mListener = listener;
     }
 
 

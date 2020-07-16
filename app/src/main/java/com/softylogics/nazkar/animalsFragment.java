@@ -24,6 +24,7 @@ import android.view.ViewGroup;
 import android.widget.ImageView;
 
 import com.softylogics.nazkar.adslist.DummyData;
+import com.softylogics.nazkar.animals.latestAdsFragment;
 import com.softylogics.nazkar.animals.latestAdsViewModel;
 
 import java.util.ArrayList;
@@ -36,7 +37,7 @@ public class animalsFragment extends Fragment {
     ImageView bull;
     private Spanned Text;
     private int mColumnCount = 3;
-    private ItemFragment.OnListFragmentInteractionListener mListener;
+
     List<DummyData> list = new ArrayList<>();
 
     public static animalsFragment newInstance() {
@@ -77,15 +78,15 @@ public class animalsFragment extends Fragment {
 
 
         Context context = root.getContext();
-        RecyclerView recyclerViewads =  root.findViewById(R.id.listre);
+        RecyclerView recyclerViewads =  root.findViewById(R.id.animalsads);
         RecyclerView recyclerViewanimals =  root.findViewById(R.id.recyclerviewanimals);
 
         recyclerViewanimals.setLayoutManager(new LinearLayoutManager(context , LinearLayoutManager.HORIZONTAL, false));
-        recyclerViewanimals.setAdapter(new RVAdapterForCircularAds( list, mListener));
+        recyclerViewanimals.setAdapter(new RVAdapterForCircularAds( list));
 
 
         recyclerViewads.setLayoutManager(new GridLayoutManager(context, mColumnCount));
-        recyclerViewads.setAdapter(new RVAdapterFroAds( list, mListener));
+        recyclerViewads.setAdapter(new RVAdapterFroAds( list));
 
 
         showBackButton();

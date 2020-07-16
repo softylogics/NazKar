@@ -6,12 +6,9 @@ import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
 
-import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
-import com.softylogics.nazkar.ItemFragment.OnListFragmentInteractionListener;
 import com.softylogics.nazkar.adslist.DummyData;
-import com.softylogics.nazkar.animalList.animalList;
 
 import java.util.List;
 
@@ -23,11 +20,11 @@ import java.util.List;
 public class RVAdapterForCircularAds extends RecyclerView.Adapter<RVAdapterForCircularAds.ViewHolder> {
 
     private final List<DummyData> mValues;
-    private final OnListFragmentInteractionListener mListener;
 
-    public RVAdapterForCircularAds(List<DummyData> items, OnListFragmentInteractionListener listener) {
+
+    public RVAdapterForCircularAds(List<DummyData> items) {
         mValues = items;
-        mListener = listener;
+
     }
 
 
@@ -50,7 +47,6 @@ public class RVAdapterForCircularAds extends RecyclerView.Adapter<RVAdapterForCi
 
         holder.img.setImageBitmap(mValues.get(position).getImage());
         holder.img.setClipToOutline(true);
-        holder.price.setText(mValues.get(position).getPrice());
         holder.title.setText(mValues.get(position).getTitle());
 
 //        holder.mView.setOnClickListener(new View.OnClickListener() {
@@ -81,8 +77,8 @@ public class RVAdapterForCircularAds extends RecyclerView.Adapter<RVAdapterForCi
             super(view);
             mView = view;
 
-            title = view.findViewById(R.id.adnametxtv);
-            img = view.findViewById(R.id.imagead);
+            title = view.findViewById(R.id.circularadnametxtv);
+            img = view.findViewById(R.id.circularimagead);
 
 
         }

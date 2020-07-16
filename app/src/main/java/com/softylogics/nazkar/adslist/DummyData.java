@@ -7,6 +7,17 @@ public class DummyData {
     Bitmap image;
     String price;
     String title;
+    String location;
+
+
+    public String getLocation() {
+        return location;
+    }
+
+    public void setLocation(String location) {
+        this.location = location;
+    }
+
 
     public String getPrice() {
         return price;
