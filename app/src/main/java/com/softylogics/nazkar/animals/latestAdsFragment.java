@@ -33,7 +33,6 @@ public class latestAdsFragment extends Fragment {
     ImageView bull;
     private Spanned Text;
     private int mColumnCount = 1;
-    private ItemFragment.OnListFragmentInteractionListener mListener;
     List<DummyData> list = new ArrayList<>();
 
     @Override
@@ -68,13 +67,13 @@ public class latestAdsFragment extends Fragment {
 
 
         recyclerViewads.setLayoutManager(new LinearLayoutManager(context, LinearLayoutManager.HORIZONTAL , false));
-        recyclerViewads.setAdapter(new RVAdapterFroAds( list, mListener));
+        recyclerViewads.setAdapter(new RVAdapterFroAds( list));
         recyclerViewanimals.setLayoutManager(new LinearLayoutManager(context, LinearLayoutManager.HORIZONTAL , false));
-        recyclerViewanimals.setAdapter(new RVAdapterFroAds( list, mListener));
+        recyclerViewanimals.setAdapter(new RVAdapterFroAds( list));
         recyclerViewcrops.setLayoutManager(new LinearLayoutManager(context, LinearLayoutManager.HORIZONTAL , false));
-        recyclerViewcrops.setAdapter(new RVAdapterFroAds( list, mListener));
+        recyclerViewcrops.setAdapter(new RVAdapterFroAds( list));
         recyclerViewtraders.setLayoutManager(new LinearLayoutManager(context, LinearLayoutManager.HORIZONTAL , false));
-        recyclerViewtraders.setAdapter(new RVAdapterFroAds( list, mListener));
+        recyclerViewtraders.setAdapter(new RVAdapterFroAds( list));
 
         showBackButton();
         ((AppCompatActivity)getActivity()).getSupportActionBar().setTitle("Latest Ads");

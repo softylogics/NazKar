@@ -25,9 +25,8 @@ public class animalSubScreen extends Fragment {
     RecyclerView subscreenrecyclerv;
     RVAdapterForCircularAds adapter;
     ListView listView;
-    ListViewAdapter adapterlistview;
+    CustomListViewAdapter adapterlistview;
     private List<DummyData> list;
-    private ItemFragment.OnListFragmentInteractionListener listner;
 
     public static animalSubScreen newInstance() {
         return new animalSubScreen();
@@ -39,7 +38,7 @@ public class animalSubScreen extends Fragment {
         View root = inflater.inflate(R.layout.animal_sub_screen_fragment, container, false);
         subscreenrecyclerv = root.findViewById(R.id.recyclerviewsubscreen);
         subscreenrecyclerv.setLayoutManager(new LinearLayoutManager(getContext() , LinearLayoutManager.HORIZONTAL, false));
-        adapter = new RVAdapterForCircularAds(list, listner);
+        adapter = new RVAdapterForCircularAds(list);
         subscreenrecyclerv.setAdapter(adapter);
         listView = root.findViewById(R.id.listviewsubscreen);
         listView.setAdapter(adapterlistview);
