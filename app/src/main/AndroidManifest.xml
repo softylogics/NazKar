@@ -12,7 +12,19 @@
         <activity
             android:name=".MainActivity"
             android:label="@string/title_activity_main"
-            android:theme="@style/AppTheme.NoActionBar"></activity>
+            android:theme="@style/AppTheme.NoActionBar"/>
+        <activity
+            android:name=".first_screen"
+            android:label="First Screen"
+            android:theme="@style/AppTheme.NoActionBar"/>
+        <activity
+            android:name=".loginFragment"
+            android:label="Login"
+            android:theme="@style/AppTheme.NoActionBar"/>
+        <activity
+            android:name=".registerFragment"
+            android:label="Register"
+            android:theme="@style/AppTheme.NoActionBar"/>
         <activity
             android:name=".SplashScreenActivity"
             android:theme="@style/SplashScreenTheme">

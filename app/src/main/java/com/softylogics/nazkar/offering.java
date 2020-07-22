@@ -34,8 +34,15 @@ public class offering extends Fragment {
         animalsButton.setClipToOutline(true);
         cropsButton =root.findViewById(R.id.cropsbutton);
         cropsButton.setClipToOutline(true);
-        tradersButton =root.findViewById(R.id.cropsbutton);
+        tradersButton =root.findViewById(R.id.tradersbutton);
         tradersButton.setClipToOutline(true);
+        animalsButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Fragment animals = new animalsFragment();
+                getActivity().getSupportFragmentManager().beginTransaction().replace(R.id.nav_host_fragment, animals).addToBackStack(null).commit();
+            }
+        });
         return root;
     }
 

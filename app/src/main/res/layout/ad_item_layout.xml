@@ -11,8 +11,8 @@
         android:id="@+id/imagead"
 
         android:background="@drawable/adlayout"
-        android:layout_width="112dp"
-        android:layout_height="112dp"
+        android:layout_width="96dp"
+        android:layout_height="96dp"
         android:scaleType="fitXY"
         android:src="@drawable/splash"
         app:layout_constraintStart_toStartOf="parent"

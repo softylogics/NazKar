@@ -11,39 +11,47 @@
     android:paddingLeft="20dp"
     android:paddingRight="20dp"
     android:orientation="vertical"
+    android:id="@+id/firstscreen"
     android:background="@drawable/splash">
 <LinearLayout
     android:layout_width="wrap_content"
     android:orientation="horizontal"
     android:layout_height="wrap_content">
+
     <ImageButton
         android:id="@+id/imageButton"
         android:layout_width="0dp"
+        android:layout_height="42dp"
+        android:layout_gravity="bottom"
+        android:layout_marginLeft="50dp"
         android:layout_weight="1"
-        android:scaleType="fitXY"
         android:background="@null"
-        android:layout_height="wrap_content"
+        android:scaleType="fitXY"
         app:srcCompat="@drawable/login_button" />
 
     <ImageButton
-        android:id="@+id/imageButton2"
+        android:id="@+id/registerButton"
         android:layout_width="0dp"
+        android:layout_marginRight="50dp"
+        android:layout_height="40dp"
+        android:layout_gravity="bottom"
+        android:layout_marginLeft="10dp"
         android:layout_weight="1"
         android:background="@null"
         android:scaleType="fitXY"
-        android:layout_marginLeft="10dp"
-        android:layout_height="wrap_content"
         app:srcCompat="@drawable/register_button" />
 
 </LinearLayout>
 
    <TextView
+       android:id="@+id/skip"
+
        android:layout_width="wrap_content"
        android:layout_height="wrap_content"
        android:text="Skip"
        android:layout_margin="10dp"
        android:textColor="@color/colorPrimary"
        android:textSize="20sp"
-       android:layout_gravity="center"/>
+       android:layout_gravity="center|bottom"/>
 
 </LinearLayout>

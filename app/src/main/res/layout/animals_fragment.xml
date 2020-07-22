@@ -4,8 +4,11 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:layout_marginBottom="50dp"
     android:orientation="vertical"
-    tools:context=".animals.latestAdsFragment">
+    android:clickable="true"
+    android:background="@drawable/sign_in_box"
+    tools:context=".animalsFragment">
 
 
 
@@ -56,76 +59,84 @@
             app:layout_constraintBottom_toBottomOf="@id/editText"
             android:layout_marginRight="15dp"/>
     </androidx.constraintlayout.widget.ConstraintLayout>
-
-
-    <androidx.recyclerview.widget.RecyclerView
-        android:layout_marginRight="20dp"
-        android:layout_marginLeft="20dp"
-
-        android:id="@+id/recyclerviewanimals"
-        android:name="com.example.nazkar.ItemFragment"
-        android:layout_width="wrap_content"
+    <ScrollView
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-
-        app:layoutManager="LinearLayoutManager"
-        tools:context=".animals.latestAdsFragment"
-        tools:listitem="@layout/fragment_item"
-        />
-
-
-
-
-
+        android:background="@color/colorPrimary"
+        android:layout_weight="3">
 
         <LinearLayout
-            android:background="@color/colorPrimary"
             android:layout_width="match_parent"
-            android:orientation="vertical"
+            android:layout_height="wrap_content"
             android:layout_weight="3"
-            android:layout_height="wrap_content">
-            <TextView
-                android:layout_marginRight="20dp"
-                android:layout_marginLeft="20dp"
-
-                android:id="@+id/adstxtv"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="20dp"
-
-                android:textStyle="bold"
-                android:textSize="30sp"
-                android:textColor="@color/appcolor"
-                android:text="Featured Ads" />
-
-
+            android:orientation="vertical">
 
             <androidx.recyclerview.widget.RecyclerView
                 android:layout_marginRight="20dp"
                 android:layout_marginLeft="20dp"
 
-                android:id="@+id/animalsads"
+                android:id="@+id/recyclerviewanimals"
                 android:name="com.example.nazkar.ItemFragment"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
 
                 app:layoutManager="LinearLayoutManager"
-                tools:context=".animals.latestAdsFragment"
+                tools:context=".animalsFragment"
                 tools:listitem="@layout/fragment_item"
                 />
 
 
+
+
+
+
+            <LinearLayout
+                android:background="@color/colorPrimary"
+                android:layout_width="match_parent"
+                android:orientation="vertical"
+                android:layout_weight="3"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:layout_marginRight="20dp"
+                    android:layout_marginLeft="20dp"
+
+                    android:id="@+id/adstxtv"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+
+                    android:textStyle="bold"
+                    android:textSize="30sp"
+                    android:textColor="@color/appcolor"
+                    android:text="Featured Ads" />
+
+
+
+                <androidx.recyclerview.widget.RecyclerView
+
+                    android:layout_marginLeft="20dp"
+
+                    android:id="@+id/animalsads"
+
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+
+
+                    tools:context=".animalsFragment"
+
+                    />
+
+
+            </LinearLayout>
+
+
         </LinearLayout>
 
+    </ScrollView>
 
-    <com.google.android.material.bottomnavigation.BottomNavigationView
-        android:id="@+id/bottomnavigation"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_gravity="bottom"
-        android:foregroundTint="@color/appcolor"
-        android:background="@color/colorPrimary"
-        app:itemIconTint="@color/fore_bottom_nav"
-        app:itemTextColor="@color/fore_bottom_nav"
-        app:menu="@menu/bonavigation" />
+
+
+
+
 
 </LinearLayout>

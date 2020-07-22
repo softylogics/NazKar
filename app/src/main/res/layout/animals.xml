@@ -98,8 +98,8 @@
             android:layout_height="wrap_content"
 
             app:layoutManager="LinearLayoutManager"
-            tools:context=".animals.latestAdsFragment"
-            tools:listitem="@layout/fragment_item"
+
+
             />
 
 
@@ -133,9 +133,8 @@
 
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                app:layoutManager="LinearLayoutManager"
-                tools:context=".animals.latestAdsFragment"
-                tools:listitem="@layout/fragment_item"
+
+
                 />
 
 
@@ -213,15 +212,6 @@
     </LinearLayout>
 
 </ScrollView>
-    <com.google.android.material.bottomnavigation.BottomNavigationView
-        android:id="@+id/bottomnavigation"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_gravity="bottom"
-        android:foregroundTint="@color/appcolor"
-        android:background="@color/colorPrimary"
-        app:itemIconTint="@color/fore_bottom_nav"
-        app:itemTextColor="@color/fore_bottom_nav"
-        app:menu="@menu/bonavigation" />
+
 
 </LinearLayout>

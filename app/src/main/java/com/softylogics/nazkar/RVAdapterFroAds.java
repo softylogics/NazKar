@@ -6,6 +6,9 @@ import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.fragment.app.Fragment;
+import androidx.fragment.app.FragmentTransaction;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.softylogics.nazkar.adslist.DummyData;
@@ -13,9 +16,7 @@ import com.softylogics.nazkar.adslist.DummyData;
 import java.util.List;
 
 /**
- * {@link RecyclerView.Adapter} that can display a {@link animalList} and makes a call to the
- * specified {@link OnListFragmentInteractionListener}.
- * TODO: Replace the implementation with code for your data type.
+* TODO: Replace the implementation with code for your data type.
  */
 public class RVAdapterFroAds extends RecyclerView.Adapter<RVAdapterFroAds.ViewHolder> {
 
@@ -32,7 +33,18 @@ public class RVAdapterFroAds extends RecyclerView.Adapter<RVAdapterFroAds.ViewHo
     public ViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
         View view = LayoutInflater.from(parent.getContext())
                 .inflate(R.layout.ad_item_layout, parent, false);
+            view.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+                    AppCompatActivity activity = (AppCompatActivity) view.getContext();
+                    productDetail pd = new productDetail();
+                    FragmentTransaction transaction = activity.getSupportFragmentManager().beginTransaction();
+                    transaction.replace(R.id.nav_host_fragment , pd);
+                    transaction.addToBackStack(null);
+                    transaction.commit();
 
+                }
+            });
 
         return new ViewHolder(view);
     }

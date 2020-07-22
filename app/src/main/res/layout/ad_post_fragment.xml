@@ -5,7 +5,10 @@
     android:id="@+id/frameLayout2"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".editProfile">
+    android:layout_marginBottom="40dp"
+    android:clickable="true"
+    android:background="@drawable/sign_in_box"
+    tools:context=".adPost">
   <ScrollView
       android:layout_width="match_parent"
       android:layout_height="match_parent">

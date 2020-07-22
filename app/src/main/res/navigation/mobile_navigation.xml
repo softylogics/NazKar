@@ -9,18 +9,79 @@
     <fragment
         android:id="@+id/nav_animals"
         android:name="com.softylogics.nazkar.animals.latestAdsFragment"
-        android:label="@string/menu_animals"
+        android:label= "Latest Ads"
         tools:layout="@layout/animals">
     </fragment>
     <fragment
         android:id="@+id/nav_crops"
         android:name="com.softylogics.nazkar.crops.cropsFragment"
-        android:label="@string/menu_crops"
+        android:label="Crops"
         tools:layout="@layout/crops" />
 
     <fragment
         android:id="@+id/nav_traders"
         android:name="com.softylogics.nazkar.traders.tradersFragment"
-        android:label="@string/menu_traders"
+        android:label="Traders"
         tools:layout="@layout/traders" />
+    <fragment
+        android:id="@+id/nav_adPost"
+        android:name="com.softylogics.nazkar.adPost"
+        android:label="Ad Post"
+        tools:layout="@layout/ad_post_fragment" />
+    <fragment
+        android:id="@+id/nav_animalsFragment"
+        android:name="com.softylogics.nazkar.animalsFragment"
+        android:label="Animals"
+        tools:layout="@layout/animals_fragment" />
+    <fragment
+        android:id="@+id/nav_animalsSubscreen"
+        android:name="com.softylogics.nazkar.animalSubScreen"
+        android:label="Animals Sub Screen"
+        tools:layout="@layout/animal_sub_screen_fragment" />
+
+    <fragment
+        android:id="@+id/nav_editProfile"
+        android:name="com.softylogics.nazkar.editProfile"
+        android:label="Edit Profile"
+        tools:layout="@layout/fragment_edit_profile" />
+    <fragment
+        android:id="@+id/nav_first_screen"
+        android:name="com.softylogics.nazkar.first_screen"
+        android:label="First Screen"
+        tools:layout="@layout/first_screen" />
+    <fragment
+        android:id="@+id/nav_loginFragment"
+        android:name="com.softylogics.nazkar.loginFragment"
+        android:label="Login"
+        tools:layout="@layout/login_fragment" />
+    <fragment
+        android:id="@+id/nav_offering"
+        android:name="com.softylogics.nazkar.offering"
+        android:label="Offering"
+        tools:layout="@layout/offering_fragment" />
+    <fragment
+        android:id="@+id/nav_productDetail"
+        android:name="com.softylogics.nazkar.productDetail"
+        android:label="Product Detail"
+        tools:layout="@layout/product_detail_fragment" />
+    <fragment
+        android:id="@+id/nav_register"
+        android:name="com.softylogics.nazkar.registerFragment"
+        android:label="Register"
+        tools:layout="@layout/register_layout" />
+
+    <fragment
+        android:id="@+id/nav_setting"
+        android:name="com.softylogics.nazkar.settings"
+        android:label="Settings"
+        tools:layout="@layout/fragment_settings" />
+    <fragment
+        android:id="@+id/nav_animalslist"
+        android:name="com.softylogics.nazkar.animalsList"
+        android:label="Animals List"
+        tools:layout="@layout/animals_list_fragment" />
+
+
+
+
 </navigation>
